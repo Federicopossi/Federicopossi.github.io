@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifica Squadre Possidente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .highlight {
+            background-color: #00bcd4;
+            color: white;
+            font-weight: bold;
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Classifica Squadre</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Posizione</th>
+                <th>Logo</th>
+                <th>Squadra</th>
+                <th>Punti</th>
+                <th>Partite</th>
+                <th>Vittorie</th>
+                <th>Pareggi</th>
+                <th>Sconfitte</th>
+                <th>Gol Fatti</th>
+                <th>Gol Subiti</th>
+                <th>Differenza Reti</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><img src="barile.png" alt="Logo F.C. Barile" class="logo"></td>
+                <td>F.C. Barile</td>
+                <td>24</td>
+                <td>8</td>
+                <td>8</td>
+                <td>0</td>
+                <td>0</td>
+                <td>26</td>
+                <td>6</td>
+                <td>+20</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img src="baragiano.png" alt="Logo Baragiano" class="logo"></td>
+                <td>Baragiano</td>
+                <td>21</td>
+                <td>8</td>
+                <td>7</td>
+                <td>0</td>
+                <td>1</td>
+                <td>24</td>
+                <td>5</td>
+                <td>+19</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img src="tito.png" alt="Logo Atletico San Cataldo" class="logo"></td>
+                <td>Atletico San Cataldo</td>
+                <td>18</td>
+                <td>8</td>
+                <td>6</td>
+                <td>0</td>
+                <td>2</td>
+                <td>15</td>
+                <td>7</td>
+                <td>+8</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><img src="santarcangelo.png" alt="Logo Nova Castelgrande" class="logo"></td>
+                <td>Nova Castelgrande</td>
+                <td>17</td>
+                <td>8</td>
+                <td>5</td>
+                <td>2</td>
+                <td>1</td>
+                <td>22</td>
+                <td>7</td>
+                <td>+15</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><img src="tito.png" alt="Logo Atletico Tito" class="logo"></td>
+                <td>Atletico Tito</td>
+                <td>13</td>
+                <td>8</td>
+                <td>4</td>
+                <td>1</td>
+                <td>3</td>
+                <td>22</td>
+                <td>10</td>
+                <td>+12</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><img src="bella.png" alt="Logo Virtus Bella Calcio" class="logo"></td>
+                <td>Virtus Bella Calcio</td>
+                <td>13</td>
+                <td>8</td>
+                <td>4</td>
+                <td>1</td>
+                <td>3</td>
+                <td>14</td>
+                <td>12</td>
+                <td>+2</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><img src="savoia.png" alt="Logo Savoia" class="logo"></td>
+                <td>Savoia</td>
+                <td>12</td>
+                <td>8</td>
+                <td>4</td>
+                <td>0</td>
+                <td>4</td>
+                <td>9</td>
+                <td>19</td>
+                <td>-10</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><img src="pescopagano.png" alt="Logo Pescopagano 1926" class="logo"></td>
+                <td>Pescopagano 1926</td>
+                <td>8</td>
+                <td>8</td>
+                <td>2</td>
+                <td>2</td>
+                <td>4</td>
+                <td>15</td>
+                <td>14</td>
+                <td>+1</td>
+            </tr>
+            <tr class="highlight">
+                <td>9</td>
+                <td><img src="possidente.png" alt="Logo Possidente" class="logo"></td>
+                <td>Possidente</td>
+                <td>6</td>
+                <td>8</td>
+                <td>2</td>
+                <td>0</td>
+                <td>6</td>
+                <td>9</td>
+                <td>20</td>
+                <td>-11</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><img src="scalera.png" alt="Logo Atletico Scalera" class="logo"></td>
+                <td>Atletico Scalera</td>
+                <td>4</td>
+                <td>8</td>
+                <td>1</td>
+                <td>1</td>
+                <td>6</td>
+                <td>8</td>
+                <td>30</td>
+                <td>-22</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><img src="santarcangiolese.png" alt="Logo Santangiolese 2024" class="logo"></td>
+                <td>Santangiolese 2024</td>
+                <td>2</td>
+                <td>8</td>
+                <td>0</td>
+                <td>2</td>
+                <td>6</td>
+                <td>7</td>
+                <td>21</td>
+                <td>-14</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><img src="satriano.png" alt="Logo Satriano 1979" class="logo"></td>
+                <td>Satriano 1979</td>
+                <td>1</td>
+                <td>8</td>
+                <td>0</td>
+                <td>1</td>
+                <td>7</td>
+                <td>5</td>
+                <td>25</td>
+                <td>-20</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+
