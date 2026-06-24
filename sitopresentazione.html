@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esame di Stato - Federico Possidente</title>
+    <!-- Font moderno da Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Libreria Icone FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- STILI GENERALI --- */
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #f1f5f9; 
+            color: #1e293b; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6;
+        }
+
+        /* --- INTESTAZIONE (HERO SECTION) IN TEMA NAVY PROFONDO --- */
+        .hero { 
+            background: linear-gradient(135deg, #020617 0%, #0f172a 100%); 
+            color: white; 
+            text-align: center; 
+            padding: 6rem 1rem 8rem 1rem; 
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            position: relative;
+        }
+
+        .hero h1 { 
+            margin: 0; 
+            font-size: 3.8rem; 
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: #ffffff;
+        }
+        
+        .hero p { 
+            font-size: 1.2rem; 
+            opacity: 0.9; 
+            font-weight: 300; 
+            margin-top: 10px; 
+            color: #94a3b8; 
+        }
+
+        /* --- CONTENITORE PRINCIPALE --- */
+        .container { 
+            max-width: 950px; 
+            margin: -5rem auto 3rem auto; 
+            padding: 0 1rem; 
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- DESIGN DELLE SCHEDE (CARDS) --- */
+        .section-card { 
+            background: #ffffff; 
+            padding: 2.5rem; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+            margin-bottom: 2.5rem; 
+            border-top: 5px solid #1e3a8a; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15); 
+        }
+
+        h2 { 
+            color: #0f172a; 
+            font-size: 1.8rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- GRIGLIA MATERIE (CSS GRID) --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .skill-card i { font-size: 2.5rem; color: #1e3a8a; margin-bottom: 1rem; }
+        .skill-card:hover { background: #f1f5f9; border-color: #94a3b8; transform: translateY(-5px); }
+        .skill-card h3 { margin: 0 0 10px 0; font-size: 1.2rem; color: #0f172a; }
+        .skill-card p { margin: 0; font-size: 0.9rem; color: #475569; font-weight: 600; }
+
+        /* --- TIMELINE PER PCTO/FSL --- */
+        .timeline {
+            border-left: 3px solid #1e3a8a; 
+            margin-left: 15px;
+            padding-left: 25px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: #1e3a8a; 
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            box-shadow: 0 0 0 2px #1e3a8a;
+        }
+        .timeline-item h3 { margin: 0 0 5px 0; color: #0f172a; font-size: 1.2rem; }
+        .timeline-item p { margin: 0; color: #475569; }
+        .timeline-badge { 
+            display: inline-block; 
+            background: #1e3a8a; 
+            color: #ffffff; 
+            font-size: 0.85rem; 
+            padding: 4px 12px; 
+            border-radius: 20px; 
+            margin-bottom: 10px; 
+            font-weight: 600;
+        }
+
+        /* --- BOTTONE MODERNO --- */
+        .btn { 
+            display: inline-flex; 
+            align-items: center;
+            gap: 8px;
+            background: #0f172a; 
+            color: white; 
+            padding: 12px 28px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            margin-top: 1rem; 
+            transition: all 0.3s ease; 
+        }
+        .btn:hover { 
+            background: #1e3a8a; 
+            transform: translateY(-2px); 
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.4); 
+            color: white; 
+        }
+
+        strong { color: #0f172a; }
+    </style>
+</head>
+<body>
+
+    <!-- Intestazione Principale Tema Navy -->
+    <header class="hero">
+        <h1>Federico Possidente</h1>
+        <p>Potenza, 27 Dicembre 2007 | Maturità ITT "EINST.-DE LOR." - Classe 5N</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- SEZIONE 1: PRESENTAZIONE -->
+        <section class="section-card">
+            <h2><i class="fa-solid fa-hand-wave"></i> Benvenuti</h2>
+            <p>Questo è il mio spazio web personale, progettato e sviluppato da me in occasione dell'<strong>Esame di Stato</strong>.</p>
+            <p>Concludo oggi il mio percorso quinquennale presso l'indirizzo <strong>Tecnico - Informatica e Telecomunicazioni</strong>. Ho sempre cercato di unire le competenze apprese in classe con le mie passioni personali, come dimostra lo sviluppo integrale del sito web per la mia squadra di calcio.</p>
+            <a href="https://fedepossi.github.io" class="btn" target="_blank">
+                <i class="fa-solid fa-futbol"></i> Visita il progetto Fedepossi
+            </a>
+        </section>
+
+        <!-- SEZIONE 2: PERCORSO DI STUDI -->
+        <section class="section-card">
+            <h2><i class="fa-solid fa-code"></i> Il mio percorso di studi</h2>
+            <p>Nel corso di questi 5 anni ho consolidato solide basi nello sviluppo software e nell'architettura delle reti. Ecco il cuore tecnico della mia formazione:</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Informatica</h3>
+                    <p>594 Ore Totali</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h3>Sistemi e Reti</h3>
+                    <p>396 Ore Totali</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-server"></i>
+                    <h3>TPSIT</h3>
+                    <p>330 Ore Totali</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Gestione Progetto</h3>
+                    <p>99 Ore (5° Anno)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE 3: ESPERIENZE PCTO CON TIMELINE -->
+        <section class="section-card">
+            <h2><i class="fa-solid fa-briefcase"></i> Esperienze FSL (PCTO)</h2>
+            <p>La teoria si è trasformata in pratica grazie a esperienze dirette e progetti innovativi:</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-badge">A.S. 2023/24</span>
+                    <h3>Progetto Realtà Aumentata</h3>
+                    <p>Virtualizzazione della nostra scuola in stile Google Maps. Il progetto permette di esplorare aule e corridoi tramite smartphone o visore VR.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-badge">A.S. 2024/25</span>
+                    <h3>Formazione Rai Way & Sede RAI</h3>
+                    <p>Corso tecnico in apprendimento misto con RAI WAY S.P.A. per un totale di 26 ore (21 in aula e 5 presso la struttura), culminato con una visita didattica alla sede centrale RAI a Roma per analizzare le infrastrutture di broadcasting.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-badge">A.S. 2024/25</span>
+                    <h3>VETA WEB</h3>
+                    <p>Esperienza intensiva di 70 ore (di cui 60 in struttura e 10 in aula) affrontando dinamiche reali di sviluppo in ambiente lavorativo.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-badge">A.S. 2025/26</span>
+                    <h3>IBM Italia & Civicamente S.R.L.</h3>
+                    <p>Attività formative nel contesto scolastico con IBM Italia per 20 ore e con Civicamente S.R.L. per 32 ore, per ampliare la visione sulle tecnologie enterprise.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE 4: COMPETENZE TECNICHE -->
+        <section class="section-card">
+            <h2><i class="fa-solid fa-globe"></i> Approfondimento Materie Tecniche</h2>
+            <p>Lo studio congiunto di <strong>Informatica, TPSIT e Sistemi e Reti</strong> mi ha fornito non solo gli strumenti per scrivere codice, ma anche per capire l'infrastruttura sottostante.</p>
+            <p>La creazione di siti web è il campo dove esprimo al meglio le mie capacità. Dalla scrittura dell'HTML/CSS alla gestione degli script, fino alla pubblicazione online: questo stesso sito dimostra la mia capacità di portare un'idea digitale dal concept alla realtà.</p>
+        </section>
+
+    </div>
+</body>
+</html>
